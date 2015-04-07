@@ -8,7 +8,7 @@ ENV DEBIAN_FRONTEND noninteractive
 ENV KIBANA_VERSION 4.0.2
 
 RUN apt-get update && \
-    apt-get install -y supervisor curl && \
+    apt-get install -y curl && \
     rm -rf /var/lib/apt/lists/*
 RUN apt-get clean all
 
@@ -19,7 +19,6 @@ RUN curl -k https://download.elasticsearch.org/kibana/kibana/kibana-$KIBANA_VERS
 
 # Adding the configuration file of the Supervisor
 COPY start.sh /start.sh
-COPY supervisord.conf /etc/
 RUN chmod +x /start.sh
 
 # Set the port to 5601

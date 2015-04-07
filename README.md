@@ -1,4 +1,4 @@
-![Kibana 4.0.2](https://img.shields.io/badge/Kibana-4.0.2-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+![kibana 4.0.2](https://img.shields.io/badge/kibana-4.0.2-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 # docker-kibana
 
@@ -10,38 +10,23 @@
 
 Kibana Dockerコンテナイメージです。
 
-[Dockerとは？](https://docs.docker.com/ "Dockerとは？")  
-[Docker Command Reference](https://docs.docker.com/reference/commandline/cli/ "Docker Command Reference")
+[Kibanaとは？](https://www.elastic.co/products/kibana)  
+[Dockerとは？](https://docs.docker.com/)  
+[Docker Command Reference](https://docs.docker.com/reference/commandline/cli/)
 
 ### 使用方法
 
 git pull後に
 
-    $ cd docker-nginx-php
+    $ cd docker-kibana
 
 イメージ作成
 
-    $ docker build -t <tag>/nginx-php .
+    $ docker build -t tanaka0323/kibana .
 
-起動
+Elasticsearchコンテナをリンクして起動 (注: aliasをesと指定して下さい。)  
 
-    $ docker run --name <name> -d -p 8081:80 -p 8082:443 -e VIRTUAL_HOST=<hostname> -ti <tag>/nginx-php
-
-コンテナ内へログイン
-
-    $ docker exec -ti <name> bash
-
-### 利用可能なボリューム
-
-以下のボリュームが利用可能
-
-    /etc/nginx          # Nginx各種設定
-    /etc/nginx/certs    # SSL認証鍵
-    /var/cache/nginx    # Nginxキャッシュ
-
-### 環境変数
-
-- <code>UPLOAD_MAX_SIZE</code>アップロード最大ファイルサイズ
+    $ docker run -p 5601:5601 --link elasticsearch:es tanaka0323/kibana
 
 ### Figでの使用方法
 
