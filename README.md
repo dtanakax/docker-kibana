@@ -1,14 +1,14 @@
-![kibana 4.0.2](https://img.shields.io/badge/kibana-4.0.2-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
+![Kibana 4.0.2](https://img.shields.io/badge/Kibana-4.0.2-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
 # docker-kibana
 
 ### Base Docker Image
 
-[tanaka0323/debianjp](https://bitbucket.org/tanaka0323/docker-debianjp "tanaka0323/debianjp")
+[debian:wheezy](https://registry.hub.docker.com/_/debian/)
 
 ### 説明
 
-Nginx+PHP5 Dockerコンテナイメージです。
+Kibana Dockerコンテナイメージです。
 
 [Dockerとは？](https://docs.docker.com/ "Dockerとは？")  
 [Docker Command Reference](https://docs.docker.com/reference/commandline/cli/ "Docker Command Reference")
