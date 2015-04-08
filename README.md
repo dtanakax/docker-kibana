@@ -24,9 +24,14 @@ git pull後に
 
     $ docker build -t tanaka0323/kibana .
 
-[elasticsearchコンテナ](https://bitbucket.org/tanaka0323/docker-elasticsearch)をリンクして起動 (注: aliasをesと指定して下さい。)  
+最初に[elasticsearchコンテナ](https://bitbucket.org/tanaka0323/docker-elasticsearch)を起動
 
-    $ docker run -p 5601:5601 --link elasticsearch:es tanaka0323/kibana
+    $ docker run --name es -d -p 9200:9200 tanaka0323/elasticsearch
+
+起動したelasticsearchコンテナをリンクしてKibanaコンテナを起動
+(注: aliasをelasticsearchと指定して下さい。)  
+
+    $ docker run -p 5601:5601 --link es:elasticsearch tanaka0323/kibana
 
 ### Figでの使用方法
 
