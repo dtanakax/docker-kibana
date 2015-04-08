@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 
-sed -i "s|^elasticsearch_url:.*|elasticsearch_url: \"http://$ELASTICSEARCH_PORT_9200_TCP_ADDR:$ELASTICSEARCH_PORT_9200_TCP_PORT\"|" /opt/kibana/config/kibana.yml
+sed -i "s|^elasticsearch_url:.*|elasticsearch_url: \"http://elasticsearch:9200\"|" /opt/kibana/config/kibana.yml
 
 # Executing
 exec /opt/kibana/bin/kibana

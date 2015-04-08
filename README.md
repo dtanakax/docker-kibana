@@ -33,6 +33,12 @@ git pull後に
 
     $ docker run -p 5601:5601 --link es:elasticsearch tanaka0323/kibana
 
+### 利用可能なボリューム
+
+以下のボリュームが利用可能
+
+    /opt/kibana/config  # Kibana設定
+
 ### Figでの使用方法
 
 [Figとは？](http://www.fig.sh/ "Fidとは？")  

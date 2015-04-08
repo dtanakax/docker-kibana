@@ -21,6 +21,9 @@ RUN curl -k https://download.elasticsearch.org/kibana/kibana/kibana-$KIBANA_VERS
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
+# Define mountable directories.
+VOLUME ["/opt/kibana/config"]
+
 # Set the port to 5601
 EXPOSE 5601
 
