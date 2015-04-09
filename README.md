@@ -33,6 +33,8 @@ git pull後に
 
     $ docker run -p 5601:5601 --link es:elasticsearch -ti tanaka0323/kibana
 
+ブラウザで<code>https://hostname:5601/</code>へアクセスし起動を確認します。
+
 ### 利用可能なボリューム
 
 以下のボリュームが利用可能

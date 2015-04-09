@@ -17,7 +17,9 @@ RUN curl -k https://download.elasticsearch.org/kibana/kibana/kibana-$KIBANA_VERS
     mv -f /kibana-$KIBANA_VERSION-linux-x64 /opt/kibana && \
     rm -f kibana.tar.gz
 
-# Adding the configuration file of the Supervisor
+# Adding the configuration file
+COPY kibana.crt /opt/kibana/certs/kibana.crt
+COPY kibana.key /opt/kibana/certs/kibana.key
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
