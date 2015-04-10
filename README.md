@@ -35,6 +35,10 @@ git pull後に
 
 ブラウザで<code>https://hostname:5601/</code>へアクセスし起動を確認します。
 
+### SSLとBasic認証を有効にするには
+
+[nginx-proxyのREADME](https://bitbucket.org/tanaka0323/docker-nginx-proxy)を参考にして下さい。
+
 ### 利用可能なボリューム
 
 以下のボリュームが利用可能

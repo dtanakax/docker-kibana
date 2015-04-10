@@ -18,8 +18,6 @@ RUN curl -k https://download.elasticsearch.org/kibana/kibana/kibana-$KIBANA_VERS
     rm -f kibana.tar.gz
 
 # Adding the configuration file
-COPY kibana.crt /opt/kibana/certs/kibana.crt
-COPY kibana.key /opt/kibana/certs/kibana.key
 COPY start.sh /start.sh
 RUN chmod +x /start.sh
 
