@@ -1,12 +1,15 @@
 ![kibana 4.0.2](https://img.shields.io/badge/kibana-4.0.2-brightgreen.svg) ![License MIT](https://img.shields.io/badge/license-MIT-blue.svg)
 
-# docker-kibana
+docker-kibana
+=====================
 
-### Base Docker Image
+Base Docker Image
+---------------------
 
 [debian:wheezy](https://registry.hub.docker.com/_/debian/)
 
-### 説明
+説明
+---------------------
 
 Kibana Dockerコンテナイメージです。
 
@@ -14,7 +17,8 @@ Kibana Dockerコンテナイメージです。
 [Dockerとは？](https://docs.docker.com/)  
 [Docker Command Reference](https://docs.docker.com/reference/commandline/cli/)
 
-### 使用方法
+使用方法
+---------------------
 
 git pull後に
 
@@ -33,25 +37,29 @@ git pull後に
 
     $ docker run -p 5601:5601 --link es:elasticsearch -ti tanaka0323/kibana
 
-ブラウザで<code>https://hostname:5601/</code>へアクセスし起動を確認します。
+ブラウザで`https://hostname:5601/`へアクセスし起動を確認します。
 
-### SSL or Basic認証を有効にするには
+SSL or Basic認証を有効にするには
+---------------------
 
 [nginx-proxyのREADME](https://bitbucket.org/tanaka0323/docker-nginx-proxy)を参考にして下さい。
 
-### 利用可能なボリューム
+利用可能なボリューム
+---------------------
 
 以下のボリュームが利用可能
 
     /opt/kibana/config  # Kibana設定
 
-### Docker Composeでの使用方法
+Docker Composeでの使用方法
+---------------------
 
 [Docker Composeとは](https://docs.docker.com/compose/)  
 
 [設定ファイル記述例](https://bitbucket.org/tanaka0323/compose-examples)
 
-### License
+License
+---------------------
 
 The MIT License
 Copyright (c) 2015 Daisuke Tanaka
