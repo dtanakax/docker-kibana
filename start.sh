@@ -1,7 +1,8 @@
 #!/bin/bash
 set -e
 
-sed -i "s|^elasticsearch_url:.*|elasticsearch_url: \"http://elasticsearch:9200\"|" /opt/kibana/config/kibana.yml
+if [ "$1" = "/opt/kibana/bin/kibana" ]; then
+    sed -i "s|^elasticsearch_url:.*|elasticsearch_url: \"http://elasticsearch:9200\"|" /opt/kibana/config/kibana.yml
+fi
 
-# Executing
-exec /opt/kibana/bin/kibana
+exec "$@"

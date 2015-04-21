@@ -24,8 +24,9 @@ RUN chmod +x /start.sh
 # Define mountable directories.
 VOLUME ["/opt/kibana/config"]
 
+ENTRYPOINT ["./start.sh"]
+
 # Set the port to 5601
 EXPOSE 5601
 
-# Executing sh
-ENTRYPOINT ./start.sh
+CMD ["/opt/kibana/bin/kibana"]
