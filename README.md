@@ -11,7 +11,7 @@ Base Docker Image
 説明
 ---------------------
 
-Kibana Dockerコンテナイメージです。
+Kibana Dockerコンテナ作成設定
 
 [Kibanaとは？](https://www.elastic.co/products/kibana)  
 [Dockerとは？](https://docs.docker.com/)  
