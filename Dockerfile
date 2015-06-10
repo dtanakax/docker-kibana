@@ -5,7 +5,7 @@ FROM dtanakax/debianjp:wheezy
 MAINTAINER Daisuke Tanaka, dtanakax@gmail.com
 
 ENV DEBIAN_FRONTEND noninteractive
-ENV KIBANA_VERSION 4.0.2
+ENV KIBANA_VERSION 4.0.3
 
 RUN apt-get update && \
     apt-get install -y curl && \
